@@ -17,6 +17,11 @@
         <div class="product-item">
             <img src='{{product.image}}'/>
             <h3>{{product.name}}{{product._id}}</h3>
+            <div class="qty-control">
+                <span data-name="{{product.name}}" onclick="modQty(-1)">-</span>
+                <input type="number" value="0" name="{{product.name}}"/>
+                <span data-name="{{product.name}}" onclick="modQTY(1)">+</span>
+            </div>
          </div>
         {% endfor %}
         </div>
